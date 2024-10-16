@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quejas y Reclamos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .screen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1s;
+        }
+        .white-screen {
+            background-color: white;
+        }
+        .blue-screen {
+            background-color: #004b87; /* Color del logo */
+            color: white;
+            opacity: 0; /* Inicialmente oculta */
+        }
+        img {
+            max-width: 200px; /* Ajusta el tamaño del logo */
+        }
+        h1 {
+            color: #F05423; /* Título en color naranja */
+            margin: 0; /* Elimina el margen por defecto */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Primera pantalla (Pantalla blanca con el logo) -->
+    <div class="screen white-screen" id="whiteScreen">
+        <img src="https://i.postimg.cc/g2wsN7cz/lisan-logo.png" alt="Logo de LISAN S.A.">
+    </div>
+
+    <!-- Segunda pantalla (Pantalla azul) -->
+    <div class="screen blue-screen" id="blueScreen">
+        <div>
+            <h1>Quejas y Reclamos</h1>
+            <p>Estimado Cliente,</p>
+            <p>En LISAN S.A, nos comprometemos con la calidad y seguridad. Si ha experimentado algún problema o defecto en alguno de nuestros productos, le pedimos que complete el siguiente formulario para informarnos sobre su queja o reclamo.</p>
+            <p>La información proporcionada será utilizada para investigar el caso, identificar posibles causas y tomar las medidas correctivas necesarias para continuar garantizando la calidad en nuestros productos. Su opinión es muy valiosa para nosotros, con ella seguimos mejorando.</p>
+            <p>Gracias por confiar en LISAN S.A, estamos comprometidos en brindarle productos de la más alta calidad y una pronta resolución de su queja.</p>
+            <p><strong>Confidencialidad:</strong> Toda la información compartida será tratada con estricta confidencialidad y en cumplimiento con las normativas de protección de datos vigentes.</p>
+            <p>Atentamente,<br>LISAN S.A.<br>Departamento de Calidad.</p>
+            <a href="https://www.appsheet.com/start/a4f2dbe8-d1ea-4d8a-9e8c-8f90cb1ded4f" class="button">Ir al formulario</a>
+        </div>
+    </div>
+
+    <script>
+        // Muestra la segunda pantalla después de un tiempo
+        setTimeout(function() {
+            document.getElementById("whiteScreen").style.opacity = '0';
+            document.getElementById("blueScreen").style.opacity = '1';
+        }, 1500); // 1.5 segundos
+    </script>
+
+</body>
+</html>
+
+
+
