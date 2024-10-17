@@ -1,0 +1,12 @@
+// style.scss
+$primary-color: #1B51A4;
+$secondary-color: #F05423;
+
+body {
+  background-color: $primary-color;
+  color: white;
+}
+
+h1 {
+  color: $secondary-color;
+}
